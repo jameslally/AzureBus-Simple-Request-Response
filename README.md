@@ -1,4 +1,8 @@
-# .Net Core example - Azure Service Bus 'Request-Response' pattern 
+# Azure ServiceBus 'Request-Response' pattern 
+## Technologies
+* .Net Core 2.2
+* Microsoft.Azure.ServiceBus (v 3.*)
+* Azure Service Bus Queues
 
 ## Steps to get working two way service bus messaging
 * Within Azure create two service bus queues. These queues must support sessions. (I have named them sessiontest and sessiontestresponse in the configs)
