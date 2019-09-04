@@ -1,10 +1,7 @@
-# AzureBus-Simple-Request-Response
-Simple .Net Core request response servicebus 
-
-
+# .Net Core example - Azure Service Bus 'Request-Response' pattern 
 
 ## Steps to get working two way service bus messaging
-* Within Azure create two service bus queues. These queues must support sessions. (sessiontest and sessiontestresponse)
+* Within Azure create two service bus queues. These queues must support sessions. (I have named them sessiontest and sessiontestresponse in the configs)
 * Ensure these queue names must match the appsettings.json in both projects. 
 * Update the servicebus connection string to your Azure service either directly in config or using user secrets.
 * Run up both projects using your tools of choice
@@ -16,6 +13,6 @@ Simple .Net Core request response servicebus
 * The Worker project picks up the request and then sends a cloned message to the response queue with the same sessionid
 * The API then receives the reponse from the worker. 
 
-## Caviates
+## Caveats
 * This is an example of non-production code
 * You will need to create objects in Azure so you must have an account
